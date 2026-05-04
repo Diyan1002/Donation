@@ -1,29 +1,23 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+/* ================= COMPONENTS ================= */
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import DonationForm from "./components/DonationForm";
-import AboutHopeFoundation from "./Components/AboutHope"; // Keep this as it is
+import AboutHopeFoundation from "./components/AboutHope"; 
 import OurProjects from "./components/OurProjects";
 import FounderProfile from "./components/FounderProfile";
 import FooterComponent from "./components/FooterComponent";
-import Blog from "./Pages/Blog";
 
-// Import the About component properly
-import AboutPage from "./Pages/About";  
-import Contact from "./Pages/Contact";
+/* ================= PAGES ================= */
+import Blog from "./pages/Blog";
+import AboutPage from "./pages/About";
+import Contact from "./pages/Contact";
 import Donate from "./pages/Donate";
 
-// Projects Page Component
-const ProjectsPage = () => (
-  <div className="py-10">
-    <OurProjects />
-  </div>
-);
-
-// Home Page Component
+/* ================= HOME PAGE ================= */
 const HomePage = () => (
   <>
     <Hero />
@@ -34,36 +28,34 @@ const HomePage = () => (
   </>
 );
 
+/* ================= PROJECTS PAGE ================= */
+const ProjectsPage = () => (
+  <div className="py-10">
+    <OurProjects />
+  </div>
+);
+
 const App = () => {
   return (
     <BrowserRouter>
 
-      {/* Common Layout */}
+      {/* HEADER + NAVBAR (GLOBAL) */}
       <Header />
       <Navbar />
 
-      {/* Routes */}
+      {/* ROUTES */}
       <Routes>
-        {/* HOME */}
         <Route path="/" element={<HomePage />} />
-
-        {/* PROJECTS */}
         <Route path="/projects" element={<ProjectsPage />} />
-
-        {/* ABOUT PAGE */}
-        <Route path="/about" element={<AboutPage />} /> {/* Now using AboutPage */}
-
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/blog" element={<Blog />} />
-
-        {/* CONTACT */}
         <Route path="/contact" element={<Contact />} />
-
         <Route path="/donate" element={<Donate />} />
       </Routes>
 
-      {/* FOOTER (always visible) */}
+      {/* FOOTER (GLOBAL) */}
       <FooterComponent />
-      
+
     </BrowserRouter>
   );
 };
