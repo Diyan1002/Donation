@@ -12,9 +12,8 @@ import FooterComponent from "./components/FooterComponent";
 import Blog from "./Pages/Blog";
 
 // Import the About component properly
-import AboutPage from "./Pages/About";  // Assuming you have an AboutPage component
-
-import Contact from "./Pages/Contact"; // Assuming you have a Contact component
+import AboutPage from "./Pages/About";  
+import Contact from "./Pages/Contact";
 import Donate from "./pages/Donate";
 
 // Projects Page Component
