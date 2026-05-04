@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import DonationForm from "./components/DonationForm";
-import AboutHopeFoundation from "./components/AboutHopeFoundation"; // Keep this as it is
+import AboutHopeFoundation from "./Components/AboutHope"; // Keep this as it is
 import OurProjects from "./components/OurProjects";
 import FounderProfile from "./components/FounderProfile";
 import FooterComponent from "./components/FooterComponent";
